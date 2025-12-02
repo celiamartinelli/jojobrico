@@ -1,0 +1,106 @@
+"use client";
+
+import * as React from "react";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
+export function RequestQuoteModal({ children }: { children: React.ReactNode }) {
+  const [open, setOpen] = React.useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("form submitted");
+    setOpen(false);
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger asChild>{children}</DialogTrigger>
+
+      <DialogContent className="max-w-lg">
+        <DialogHeader>
+          <DialogTitle>Demander un devis gratuit</DialogTitle>
+        </DialogHeader>
+
+        <form onSubmit={handleSubmit} className="space-y-4">
+          <div>
+            <Label htmlFor="name">Nom complet</Label>
+            <Input id="name" required placeholder="Votre nom" />
+          </div>
+
+          <div>
+            <Label htmlFor="email">Email</Label>
+            <Input
+              id="email"
+              type="email"
+              required
+              placeholder="exemple@mail.com"
+            />
+          </div>
+
+          <div>
+            <Label htmlFor="phone">Téléphone</Label>
+            <Input
+              id="phone"
+              type="tel"
+              required
+              placeholder="06 00 00 00 00"
+            />
+          </div>
+
+          <div>
+            <Label>Type de travaux</Label>
+            <Select required>
+              <SelectTrigger>
+                <SelectValue placeholder="Choisir un type" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="plomberie">Plomberie</SelectItem>
+                <SelectItem value="menuiserie">Menuiserie</SelectItem>
+                <SelectItem value="peinture">Peinture</SelectItem>
+                <SelectItem value="petits-travaux">Petits travaux</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div>
+            <Label htmlFor="budget">Budget estimé (€)</Label>
+            <Input id="budget" type="number" placeholder="Ex: 15000" />
+          </div>
+
+          <div>
+            <Label htmlFor="description">Description du projet</Label>
+            <Textarea
+              id="description"
+              rows={4}
+              placeholder="Décrivez votre projet..."
+            />
+          </div>
+
+          <Button
+            type="submit"
+            className="w-full bg-orange-600 hover:bg-orange-700"
+          >
+            Envoyer la demande
+          </Button>
+        </form>
+      </DialogContent>
+    </Dialog>
+  );
+}
