@@ -95,7 +95,7 @@ export function RequestQuoteModal({ children }: { children: React.ReactNode }) {
 
           <Button
             type="submit"
-            className="w-full bg-orange-600 hover:bg-orange-700"
+            className="w-full bg-[#4a94bb] hover:bg-[#3a7a9b]"
           >
             Envoyer la demande
           </Button>

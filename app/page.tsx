@@ -13,6 +13,9 @@ import {
   Clock,
   Star,
   CheckCircle2,
+  Leaf,
+  Layers,
+  Zap,
 } from "lucide-react";
 import { RequestQuoteModal } from "@/components/RequestQuoteModal";
 import Link from "next/link";
@@ -24,32 +27,32 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
-              <Wrench className="h-8 w-8 text-orange-600" />
+              <Wrench className="h-8 w-8 text-[#4a94bb]" />
               <span className="text-xl font-bold text-slate-900">
-                Service Pro
+                JOJOBRICO
               </span>
             </div>
             <nav className="hidden md:flex gap-8">
               <a
                 href="#services"
-                className="text-slate-600 hover:text-orange-600 transition-colors font-medium"
+                className="text-slate-600 hover:text-[#4a94bb] transition-colors font-medium"
               >
                 Services
               </a>
               <a
                 href="#realisations"
-                className="text-slate-600 hover:text-orange-600 transition-colors font-medium"
+                className="text-slate-600 hover:text-[#4a94bb] transition-colors font-medium"
               >
                 Réalisations
               </a>
               <a
                 href="#contact"
-                className="text-slate-600 hover:text-orange-600 transition-colors font-medium"
+                className="text-slate-600 hover:text-[#4a94bb] transition-colors font-medium"
               >
                 Contact
               </a>
             </nav>
-            <Button className="bg-orange-600 hover:bg-orange-700">
+            <Button className="bg-[#4a94bb] hover:bg-[#3a7a9b]">
               <Phone className="h-4 w-4 mr-2" />
               Appelez-nous
             </Button>
@@ -62,12 +65,11 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl sm:text-6xl font-bold text-slate-900 leading-tight mb-6">
-                Votre homme à tout faire de confiance
+                Homme toutes mains, petits travaux de bricolage
               </h1>
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Plomberie, menuiserie, petits travaux et bien plus encore.
-                Intervention rapide et travail soigné pour tous vos besoins du
-                quotidien.
+                Petits travaux de dépannage à domicile, plomberie, menuiserie,
+                jardinage, montage de meuble, décoration intérieur...
               </p>
               <div className="flex flex-wrap gap-4">
                 {/* <Button
@@ -79,7 +81,7 @@ export default function Home() {
                 <RequestQuoteModal>
                   <Button
                     size="lg"
-                    className="bg-orange-600 hover:bg-orange-700 text-lg"
+                    className="bg-[#4a94bb] hover:bg-[#3a7a9b] text-lg"
                   >
                     Demander un devis gratuit
                   </Button>
@@ -95,34 +97,34 @@ export default function Home() {
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-orange-600 text-orange-600 hover:bg-orange-50"
+                    className="border-[#4a94bb] text-[#4a94bb] hover:bg-[#e0f0fa]"
                   >
-                    Voir nos réalisations
+                    Voir mes réalisations
                   </Button>
                 </Link>
               </div>
-              <div className="mt-8 flex items-center gap-6">
+              {/* <div className="mt-8 flex items-center gap-6">
                 <div className="flex items-center gap-2">
-                  <Star className="h-5 w-5 fill-orange-500 text-orange-500" />
-                  <Star className="h-5 w-5 fill-orange-500 text-orange-500" />
-                  <Star className="h-5 w-5 fill-orange-500 text-orange-500" />
-                  <Star className="h-5 w-5 fill-orange-500 text-orange-500" />
-                  <Star className="h-5 w-5 fill-orange-500 text-orange-500" />
+                  <Star className="h-5 w-5 fill-[#4a94bb] text-[#4a94bb]" />
+                  <Star className="h-5 w-5 fill-[#4a94bb] text-[#4a94bb]" />
+                  <Star className="h-5 w-5 fill-[#4a94bb] text-[#4a94bb]" />
+                  <Star className="h-5 w-5 fill-[#4a94bb] text-[#4a94bb]" />
+                  <Star className="h-5 w-5 fill-[#4a94bb] text-[#4a94bb]" />
                 </div>
                 <span className="text-slate-600 font-medium">
                   Plus de 200 clients satisfaits
                 </span>
-              </div>
+              </div> */}
             </div>
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-orange-100 to-orange-50 rounded-3xl shadow-2xl overflow-hidden">
+              <div className="aspect-square bg-gradient-to-br from-[#a8cde6] to-[#4a94bb] rounded-3xl shadow-2xl overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/5691607/pexels-photo-5691607.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/petitbonhomme.png"
                   alt="Professionnel au travail"
-                  className="w-full h-full object-cover"
+                  className="h-full w-auto mx-auto object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl">
+              {/* <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl">
                 <div className="flex items-center gap-3">
                   <CheckCircle2 className="h-8 w-8 text-green-500" />
                   <div>
@@ -132,7 +134,7 @@ export default function Home() {
                     <div className="text-slate-600">d'expérience</div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -142,65 +144,106 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Nos Services
+              Mes Services
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Une large gamme de prestations pour répondre à tous vos besoins
+              Travaux de dépannage et d’aménagement à domicile
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="border-2 hover:border-orange-300 hover:shadow-lg transition-all group">
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {/* Plomberie */}
+            <Card className="border-2 hover:border-[#4a94bb] hover:shadow-lg transition-all group">
               <CardContent className="p-6">
-                <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-orange-600 transition-colors">
-                  <Droplet className="h-7 w-7 text-orange-600 group-hover:text-white" />
+                <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
+                  <Droplet className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">
                   Plomberie
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Réparation de fuites, installation sanitaire, débouchage
+                  Changement de robinet, remplacement de joints d’étanchéité,
+                  petites réparations et dépannages courants.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:border-orange-300 hover:shadow-lg transition-all group">
+            {/* Electricité */}
+            <Card className="border-2 hover:border-[#4a94bb] hover:shadow-lg transition-all group">
               <CardContent className="p-6">
-                <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-orange-600 transition-colors">
-                  <Hammer className="h-7 w-7 text-orange-600 group-hover:text-white" />
+                <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
+                  <Zap className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Menuiserie
+                  Électricité
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Pose de portes, fenêtres, meubles sur mesure, réparations
+                  Pose ou remplacement de prises, interrupteurs, luminaires et
+                  appliques murales.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:border-orange-300 hover:shadow-lg transition-all group">
+            {/* Décoration */}
+            <Card className="border-2 hover:border-[#4a94bb] hover:shadow-lg transition-all group">
               <CardContent className="p-6">
-                <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-orange-600 transition-colors">
-                  <PaintBucket className="h-7 w-7 text-orange-600 group-hover:text-white" />
+                <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
+                  <PaintBucket className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Peinture
+                  Décoration & Intérieur
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Peinture intérieure et extérieure, décoration murale
+                  Peinture intérieure, tapisserie, pose de tringles, fixation de
+                  cadres et éléments décoratifs.
                 </p>
               </CardContent>
             </Card>
 
-            <Card className="border-2 hover:border-orange-300 hover:shadow-lg transition-all group">
+            {/* Revêtements de sol */}
+            <Card className="border-2 hover:border-[#4a94bb] hover:shadow-lg transition-all group">
               <CardContent className="p-6">
-                <div className="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-orange-600 transition-colors">
-                  <Wrench className="h-7 w-7 text-orange-600 group-hover:text-white" />
+                <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
+                  <Layers className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Petits Travaux
+                  Revêtements de sol
                 </h3>
                 <p className="text-slate-600 leading-relaxed">
-                  Montage de meubles, fixations, électricité simple
+                  Pose de parquet, de moquette et autres revêtements pour vos
+                  sols intérieurs.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Jardinage */}
+            <Card className="border-2 hover:border-[#4a94bb] hover:shadow-lg transition-all group">
+              <CardContent className="p-6">
+                <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
+                  <Leaf className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  Jardinage & Extérieur
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Tonte de pelouse, taille de haies, nettoyage des sols et
+                  terrasses au nettoyeur haute pression.
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Maçonnerie & montage */}
+            <Card className="border-2 hover:border-[#4a94bb] hover:shadow-lg transition-all group">
+              <CardContent className="p-6">
+                <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
+                  <Hammer className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
+                  Maçonnerie & Montage
+                </h3>
+                <p className="text-slate-600 leading-relaxed">
+                  Petits travaux de maçonnerie, murets, pose de clôtures et
+                  montage de meubles.
                 </p>
               </CardContent>
             </Card>
@@ -215,7 +258,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
-              Nos Réalisations
+              Mes activités
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               Découvrez quelques-uns de nos projets récents
@@ -225,7 +268,7 @@ export default function Home() {
             <div className="group cursor-pointer">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="https://images.pexels.com/photos/1669754/pexels-photo-1669754.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt="Rénovation salle de bain"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -237,7 +280,7 @@ export default function Home() {
             <div className="group cursor-pointer">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src="https://images.pexels.com/photos/1669754/pexels-photo-1669754.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=800"
                   alt="Pose de parquet"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -262,11 +305,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+      {/* <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <Clock className="h-12 w-12 text-orange-600 mx-auto mb-4" />
+              <Clock className="h-12 w-12 text-[#4a94bb] mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-slate-900 mb-2">
                 Intervention Rapide
               </h3>
@@ -275,7 +318,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <CheckCircle2 className="h-12 w-12 text-orange-600 mx-auto mb-4" />
+              <CheckCircle2 className="h-12 w-12 text-[#4a94bb] mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-slate-900 mb-2">
                 Travail Soigné
               </h3>
@@ -284,7 +327,7 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <Star className="h-12 w-12 text-orange-600 mx-auto mb-4" />
+              <Star className="h-12 w-12 text-[#4a94bb] mx-auto mb-4" />
               <h3 className="text-2xl font-bold text-slate-900 mb-2">
                 Prix Justes
               </h3>
@@ -292,35 +335,35 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section
         id="contact"
-        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-orange-600 to-orange-700"
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-[#4a94bb] to-[#3a7a9e]"
       >
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Besoin d'un coup de main ?
           </h2>
-          <p className="text-xl text-orange-100 mb-12">
-            Contactez-nous dès maintenant pour un devis gratuit et sans
+          <p className="text-xl text-[#a8cde6] mb-12">
+            Contactez-moi dès maintenant pour un devis gratuit et sans
             engagement
           </p>
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <Phone className="h-8 w-8 text-white mx-auto mb-3" />
               <div className="text-white font-semibold mb-1">Téléphone</div>
-              <div className="text-orange-100">06 12 34 56 78</div>
+              <div className="text-[#a8cde6]">06 12 34 56 78</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <Mail className="h-8 w-8 text-white mx-auto mb-3" />
               <div className="text-white font-semibold mb-1">Email</div>
-              <div className="text-orange-100">contact@servicepro.fr</div>
+              <div className="text-[#a8cde6]">jojobrico64@outlook.fr</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <MapPin className="h-8 w-8 text-white mx-auto mb-3" />
               <div className="text-white font-semibold mb-1">Zone</div>
-              <div className="text-orange-100">Paris et Île-de-France</div>
+              <div className="text-[#a8cde6]">Bois d'Arcy et ses alentours</div>
             </div>
           </div>
           {/* <Button
@@ -332,7 +375,7 @@ export default function Home() {
           <RequestQuoteModal>
             <Button
               size="lg"
-              className="bg-white text-orange-600 hover:bg-orange-50 text-lg px-8"
+              className="bg-white text-[#4a94bb] hover:bg-[#e0f0fa] text-lg px-8"
             >
               Demander un devis
             </Button>
@@ -343,15 +386,15 @@ export default function Home() {
       <footer className="bg-slate-900 text-slate-300 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Wrench className="h-6 w-6 text-orange-600" />
-            <span className="text-xl font-bold text-white">Service Pro</span>
+            <Wrench className="h-6 w-6 text-[#4a94bb]" />
+            <span className="text-xl font-bold text-white">Jojobrico</span>
           </div>
           <p className="text-slate-400 mb-4">
             Auto-entrepreneur spécialisé dans les petits travaux et la
             rénovation
           </p>
           <p className="text-slate-500 text-sm">
-            © 2025 Service Pro. Tous droits réservés.
+            © 2025 Jojobrico. Tous droits réservés.
           </p>
         </div>
       </footer>
