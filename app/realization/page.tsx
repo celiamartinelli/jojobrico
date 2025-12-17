@@ -5,12 +5,12 @@ const projects = [
   {
     title: "Rénovation de salle de bain",
     image:
-      "https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/1669754/pexels-photo-1669754.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     title: "Pose de parquet",
     image:
-      "https://images.pexels.com/photos/1669754/pexels-photo-1669754.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=800",
   },
   {
     title: "Peinture intérieure",

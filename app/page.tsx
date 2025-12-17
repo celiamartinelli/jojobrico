@@ -16,6 +16,13 @@ import {
   Leaf,
   Layers,
   Zap,
+  FileQuestion,
+  ShieldQuestion,
+  MessageCircleQuestion,
+  HandCoins,
+  HandHeart,
+  HandIcon,
+  FileText,
 } from "lucide-react";
 import { RequestQuoteModal } from "@/components/RequestQuoteModal";
 import Link from "next/link";
@@ -52,10 +59,16 @@ export default function Home() {
                 Contact
               </a>
             </nav>
-            <Button className="bg-[#4a94bb] hover:bg-[#3a7a9b]">
-              <Phone className="h-4 w-4 mr-2" />
-              Appelez-nous
-            </Button>
+
+            <RequestQuoteModal>
+              <Button
+                size="lg"
+                className="bg-[#4a94bb] text-white hover:bg-[#3a7a9b] text-lg px-8"
+              >
+                <FileText className="h-4 w-4 mr-2" />
+                Demander un devis
+              </Button>
+            </RequestQuoteModal>
           </div>
         </div>
       </header>
@@ -353,7 +366,7 @@ export default function Home() {
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <Phone className="h-8 w-8 text-white mx-auto mb-3" />
               <div className="text-white font-semibold mb-1">Téléphone</div>
-              <div className="text-[#a8cde6]">06 12 34 56 78</div>
+              <div className="text-[#a8cde6]">06 26 41 96 42</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl">
               <Mail className="h-8 w-8 text-white mx-auto mb-3" />
