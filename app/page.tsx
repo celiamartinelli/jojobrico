@@ -60,15 +60,14 @@ export default function Home() {
               </a>
             </nav>
 
-            <RequestQuoteModal>
-              <Button
-                size="lg"
-                className="bg-[#4a94bb] text-white hover:bg-[#3a7a9b] text-lg px-8"
-              >
-                <FileText className="h-4 w-4 mr-2" />
-                Demander un devis
-              </Button>
-            </RequestQuoteModal>
+            <Button
+              type="button"
+              asChild
+              size="lg"
+              className="bg-[#4a94bb] text-white hover:bg-[#3a7a9b] text-lg px-8"
+            >
+              <a href="mailto:jojobrico64@outlook.fr">Ecrivez-moi</a>
+            </Button>
           </div>
         </div>
       </header>
@@ -91,14 +90,16 @@ export default function Home() {
                 >
                   Demander un devis gratuit
                 </Button> */}
-                <RequestQuoteModal>
-                  <Button
-                    size="lg"
-                    className="bg-[#4a94bb] hover:bg-[#3a7a9b] text-lg"
-                  >
-                    Demander un devis gratuit
-                  </Button>
-                </RequestQuoteModal>
+                <Button
+                  type="button"
+                  asChild
+                  size="lg"
+                  className="bg-[#4a94bb] text-white hover:bg-[#3a7a9b] text-lg px-8"
+                >
+                  <a href="mailto:jojobrico64@outlook.fr">
+                    Demandez un devis gratuit
+                  </a>
+                </Button>
                 {/* <Button
                   size="lg"
                   variant="outline"
@@ -106,7 +107,7 @@ export default function Home() {
                 >
                   Voir nos réalisations
                 </Button> */}
-                <Link href="/realization">
+                {/* <Link href="/realization">
                   <Button
                     size="lg"
                     variant="outline"
@@ -114,7 +115,7 @@ export default function Home() {
                   >
                     Voir mes réalisations
                   </Button>
-                </Link>
+                </Link> */}
               </div>
               {/* <div className="mt-8 flex items-center gap-6">
                 <div className="flex items-center gap-2">
@@ -385,14 +386,15 @@ export default function Home() {
           >
             Demander un devis
           </Button> */}
-          <RequestQuoteModal>
-            <Button
-              size="lg"
-              className="bg-white text-[#4a94bb] hover:bg-[#e0f0fa] text-lg px-8"
-            >
-              Demander un devis
-            </Button>
-          </RequestQuoteModal>
+          {/* <RequestQuoteModal> */}
+          <Button
+            type="button"
+            asChild
+            className="bg-[#4a94bb] text-white hover:bg-[#3a7a9b] text-lg px-8"
+          >
+            <a href="mailto:jojobrico64@outlook.fr">Ecrivez-moi</a>
+          </Button>
+          {/* </RequestQuoteModal> */}
         </div>
       </section>
 
@@ -407,7 +409,7 @@ export default function Home() {
             rénovation
           </p>
           <p className="text-slate-500 text-sm">
-            © 2025 Jojobrico. Tous droits réservés.
+            © 2026 Jojobrico. Tous droits réservés.
           </p>
         </div>
       </footer>

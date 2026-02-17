@@ -23,9 +23,36 @@ import {
 export function RequestQuoteModal({ children }: { children: React.ReactNode }) {
   const [open, setOpen] = React.useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("form submitted");
+
+    const form = e.currentTarget;
+
+    const name = (form.elements.namedItem("name") as HTMLInputElement).value;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const phone = (form.elements.namedItem("phone") as HTMLInputElement).value;
+    const budget = (form.elements.namedItem("budget") as HTMLInputElement)
+      .value;
+    const description = (
+      form.elements.namedItem("description") as HTMLTextAreaElement
+    ).value;
+
+    const subject = "Nouvelle demande de devis";
+
+    const body = `
+Nom: ${name}
+Email: ${email}
+Téléphone: ${phone}
+Budget: ${budget}
+Description: ${description}
+  `;
+
+    const mailtoLink = `mailto:jojobrico64@outlook.fr?subject=${encodeURIComponent(
+      subject,
+    )}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailtoLink;
+
     setOpen(false);
   };
 
