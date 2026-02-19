@@ -28,6 +28,38 @@ import { RequestQuoteModal } from "@/components/RequestQuoteModal";
 import Link from "next/link";
 
 export default function Home() {
+  const activities = [
+    {
+      title: "Plomberie",
+      image: "/jojobrico-plomberie.jpg",
+      alt: "Plomberie",
+    },
+    {
+      title: "Montage de meuble en kit",
+      image: "/jojobrico-meuble.jpg",
+      alt: "Montage de meuble en kit",
+    },
+    {
+      title: "Peinture intérieure",
+      image: "/jojobrico-peinture.jpg",
+      alt: "Peinture intérieure",
+    },
+    {
+      title: "Entretien espace vert",
+      image: "/jojobrico-pelouse.jpg",
+      alt: "Entretien espace vert",
+    },
+    {
+      title: "Électricité",
+      image: "/jojobrico-electricite.jpg",
+      alt: "Petits travaux d'électricité",
+    },
+    {
+      title: "Revêtements de sol",
+      image: "/jojobrico-sol.jpg",
+      alt: "Revêtement de sol",
+    },
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
@@ -35,9 +67,11 @@ export default function Home() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
               <Wrench className="h-8 w-8 text-[#4a94bb]" />
-              <span className="text-xl font-bold text-slate-900">
-                JOJOBRICO
-              </span>
+              <a href="#accueil">
+                <span className="text-xl font-bold text-slate-900">
+                  JOJOBRICO
+                </span>
+              </a>
             </div>
             <nav className="hidden md:flex gap-8">
               <a
@@ -72,7 +106,7 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section id="accueil" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -117,38 +151,19 @@ export default function Home() {
                   </Button>
                 </Link> */}
               </div>
-              {/* <div className="mt-8 flex items-center gap-6">
-                <div className="flex items-center gap-2">
-                  <Star className="h-5 w-5 fill-[#4a94bb] text-[#4a94bb]" />
-                  <Star className="h-5 w-5 fill-[#4a94bb] text-[#4a94bb]" />
-                  <Star className="h-5 w-5 fill-[#4a94bb] text-[#4a94bb]" />
-                  <Star className="h-5 w-5 fill-[#4a94bb] text-[#4a94bb]" />
-                  <Star className="h-5 w-5 fill-[#4a94bb] text-[#4a94bb]" />
-                </div>
-                <span className="text-slate-600 font-medium">
-                  Plus de 200 clients satisfaits
-                </span>
-              </div> */}
             </div>
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-[#a8cde6] to-[#4a94bb] rounded-3xl shadow-2xl overflow-hidden">
+              <div className="relative aspect-square bg-gradient-to-br from-[#a8cde6] to-[#4a94bb] rounded-3xl shadow-2xl overflow-hidden">
                 <img
-                  src="/petitbonhomme.png"
+                  src="/petitbonhomme2.png"
                   alt="Professionnel au travail"
                   className="h-full w-auto mx-auto object-cover"
                 />
+
+                <span className="absolute bottom-3 right-3 text-xs text-white/80 px-2 py-1 rounded-md backdrop-blur-sm">
+                  Designed by Freepik
+                </span>
               </div>
-              {/* <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl">
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="h-8 w-8 text-green-500" />
-                  <div>
-                    <div className="font-bold text-2xl text-slate-900">
-                      15+ ans
-                    </div>
-                    <div className="text-slate-600">d'expérience</div>
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
         </div>
@@ -169,12 +184,24 @@ export default function Home() {
             {/* Plomberie */}
             <Card className="border-2 hover:border-[#4a94bb] hover:shadow-lg transition-all group">
               <CardContent className="p-6">
-                <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
-                  <Droplet className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                  <div className="flex items-center">
+                    <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
+                      <Droplet className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />{" "}
+                    </div>
+                    <h3 className="text-xl font-bold text-slate-900 mb-2">
+                      {" "}
+                      Plomberie
+                    </h3>
+                  </div>
+
+                  <img
+                    src="/jojobrico-plomberie.jpg"
+                    alt="plomberie"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Plomberie
-                </h3>
+
                 <p className="text-slate-600 leading-relaxed">
                   Changement de robinet, remplacement de joints d’étanchéité,
                   petites réparations et dépannages courants.
@@ -270,51 +297,38 @@ export default function Home() {
         className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50"
       >
         <div className="max-w-7xl mx-auto">
+          {/* Header */}
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
               Mes activités
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Découvrez quelques-uns de nos projets récents
+              Découvrez quelques réalisations
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="group cursor-pointer">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                <img
-                  src="https://images.pexels.com/photos/1669754/pexels-photo-1669754.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Rénovation salle de bain"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+
+          {/* Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {activities.map((activity, index) => (
+              <div
+                key={index}
+                className={`group cursor-pointer ${
+                  index === 3 ? "md:col-end-2" : ""
+                }`}
+              >
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                  <img
+                    src={activity.image}
+                    alt={activity.alt}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+
+                <h3 className="mt-4 text-lg font-semibold text-slate-900">
+                  {activity.title}
+                </h3>
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-slate-900">
-                Rénovation salle de bain
-              </h3>
-            </div>
-            <div className="group cursor-pointer">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                <img
-                  src="https://images.pexels.com/photos/1249611/pexels-photo-1249611.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Pose de parquet"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-slate-900">
-                Pose de parquet
-              </h3>
-            </div>
-            <div className="group cursor-pointer">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                <img
-                  src="https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Peinture intérieure"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <h3 className="mt-4 text-lg font-semibold text-slate-900">
-                Peinture intérieure
-              </h3>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -380,13 +394,7 @@ export default function Home() {
               <div className="text-[#a8cde6]">Bois d'Arcy et ses alentours</div>
             </div>
           </div>
-          {/* <Button
-            size="lg"
-            className="bg-white text-orange-600 hover:bg-orange-50 text-lg px-8"
-          >
-            Demander un devis
-          </Button> */}
-          {/* <RequestQuoteModal> */}
+
           <Button
             type="button"
             asChild
