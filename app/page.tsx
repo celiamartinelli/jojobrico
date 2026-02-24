@@ -28,6 +28,56 @@ import { RequestQuoteModal } from "@/components/RequestQuoteModal";
 import Link from "next/link";
 
 export default function Home() {
+  const services = [
+    {
+      title: "Plomberie",
+      description:
+        "Changement de robinet, remplacement de joints d’étanchéité, petites réparations et dépannages courants.",
+      image: "/jojobrico-plomberie.jpg",
+      alt: "Plomberie",
+      icon: Droplet,
+    },
+    {
+      title: "Électricité",
+      description:
+        "Pose ou remplacement de prises, interrupteurs, luminaires et appliques murales.",
+      image: "/jojobrico-electricite.jpg",
+      alt: "Électricité",
+      icon: Zap,
+    },
+    {
+      title: "Décoration & Intérieur",
+      description:
+        "Peinture intérieure, tapisserie, pose de tringles, fixation de cadres et éléments décoratifs.",
+      image: "/jojobrico-peinture.jpg",
+      alt: "Décoration intérieure",
+      icon: PaintBucket,
+    },
+    {
+      title: "Revêtements de sol",
+      description:
+        "Pose de parquet, de moquette et autres revêtements pour vos sols intérieurs.",
+      image: "/jojobrico-sol.jpg",
+      alt: "Revêtements de sol",
+      icon: Layers,
+    },
+    {
+      title: "Jardinage & Extérieur",
+      description:
+        "Tonte de pelouse, taille de haies, nettoyage des sols et terrasses au nettoyeur haute pression.",
+      image: "/jojobrico-pelouse.jpg",
+      alt: "Jardinage",
+      icon: Leaf,
+    },
+    {
+      title: "Maçonnerie & Montage",
+      description:
+        "Petits travaux de maçonnerie, murets, pose de clôtures et montage de meubles.",
+      image: "/jojobrico-meuble.jpg",
+      alt: "Maçonnerie et montage",
+      icon: Hammer,
+    },
+  ];
   const activities = [
     {
       title: "Plomberie",
@@ -80,12 +130,12 @@ export default function Home() {
               >
                 Services
               </a>
-              <a
+              {/* <a
                 href="#realisations"
                 className="text-slate-600 hover:text-[#4a94bb] transition-colors font-medium"
               >
                 Réalisations
-              </a>
+              </a> */}
               <a
                 href="#contact"
                 className="text-slate-600 hover:text-[#4a94bb] transition-colors font-medium"
@@ -180,124 +230,50 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* Plomberie */}
-            <Card className="border-2 hover:border-[#4a94bb] hover:shadow-lg transition-all group">
-              <CardContent className="p-6">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
-                  <div className="flex items-center">
-                    <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
-                      <Droplet className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />{" "}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {services.map((service, index) => {
+              const Icon = service.icon;
+
+              return (
+                <Card
+                  key={index}
+                  className="border-2 hover:border-[#4a94bb] hover:shadow-lg transition-all group"
+                >
+                  <CardContent className="p-6">
+                    <div className="flex items-center">
+                      <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
+                        <Icon className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-slate-900 mb-2 ml-2">
+                        {service.title}
+                      </h3>
                     </div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">
-                      {" "}
-                      Plomberie
-                    </h3>
-                  </div>
 
-                  <img
-                    src="/jojobrico-plomberie.jpg"
-                    alt="plomberie"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
+                    <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                      <img
+                        src={service.image}
+                        alt={service.alt}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    </div>
 
-                <p className="text-slate-600 leading-relaxed">
-                  Changement de robinet, remplacement de joints d’étanchéité,
-                  petites réparations et dépannages courants.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Electricité */}
-            <Card className="border-2 hover:border-[#4a94bb] hover:shadow-lg transition-all group">
-              <CardContent className="p-6">
-                <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
-                  <Zap className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Électricité
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Pose ou remplacement de prises, interrupteurs, luminaires et
-                  appliques murales.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Décoration */}
-            <Card className="border-2 hover:border-[#4a94bb] hover:shadow-lg transition-all group">
-              <CardContent className="p-6">
-                <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
-                  <PaintBucket className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Décoration & Intérieur
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Peinture intérieure, tapisserie, pose de tringles, fixation de
-                  cadres et éléments décoratifs.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Revêtements de sol */}
-            <Card className="border-2 hover:border-[#4a94bb] hover:shadow-lg transition-all group">
-              <CardContent className="p-6">
-                <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
-                  <Layers className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Revêtements de sol
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Pose de parquet, de moquette et autres revêtements pour vos
-                  sols intérieurs.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Jardinage */}
-            <Card className="border-2 hover:border-[#4a94bb] hover:shadow-lg transition-all group">
-              <CardContent className="p-6">
-                <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
-                  <Leaf className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Jardinage & Extérieur
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Tonte de pelouse, taille de haies, nettoyage des sols et
-                  terrasses au nettoyeur haute pression.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Maçonnerie & montage */}
-            <Card className="border-2 hover:border-[#4a94bb] hover:shadow-lg transition-all group">
-              <CardContent className="p-6">
-                <div className="w-14 h-14 bg-[#e0f0fa] rounded-xl flex items-center justify-center mb-4 group-hover:bg-[#4a94bb] transition-colors">
-                  <Hammer className="h-7 w-7 text-[#4a94bb] group-hover:text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  Maçonnerie & Montage
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  Petits travaux de maçonnerie, murets, pose de clôtures et
-                  montage de meubles.
-                </p>
-              </CardContent>
-            </Card>
+                    <p className="text-slate-600 text-xl leading-relaxed mt-4">
+                      {service.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
-
+      {/* 
       <section
         id="realisations"
         className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50"
       >
         <div className="max-w-7xl mx-auto">
-          {/* Header */}
+  
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-slate-900 mb-4">
               Mes activités
@@ -307,7 +283,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Grid */}
+   
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {activities.map((activity, index) => (
               <div
@@ -331,7 +307,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-5xl mx-auto">
@@ -398,7 +374,7 @@ export default function Home() {
           <Button
             type="button"
             asChild
-            className="bg-[#4a94bb] text-white hover:bg-[#3a7a9b] text-lg px-8"
+            className="bg-white text-[#4a94bb] hover:bg-[#3a7a9b] hover:text-white text-lg px-8"
           >
             <a href="mailto:jojobrico64@outlook.fr">Ecrivez-moi</a>
           </Button>
