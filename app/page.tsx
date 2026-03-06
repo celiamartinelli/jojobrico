@@ -32,7 +32,7 @@ export default function Home() {
     {
       title: "Plomberie",
       description:
-        "Changement de robinet, remplacement de joints d’étanchéité, petites réparations et dépannages courants.",
+        "Remplacement de robinetterie, de joints d'étanchéité, réfection des joints en silicone",
       image: "/jojobrico-plomberie.jpg",
       alt: "Plomberie",
       icon: Droplet,
@@ -40,29 +40,29 @@ export default function Home() {
     {
       title: "Électricité",
       description:
-        "Pose ou remplacement de prises, interrupteurs, luminaires et appliques murales.",
+        "Remplacement d'interrupteurs et de prises, pose de luminaires et d'appliques murales",
       image: "/jojobrico-electricite.jpg",
       alt: "Électricité",
       icon: Zap,
     },
     {
-      title: "Décoration & Intérieur",
+      title: "Décoration",
       description:
-        "Peinture intérieure, tapisserie, pose de tringles, fixation de cadres et éléments décoratifs.",
+        "Retouche de peinture, pose de tringles d'étagères, de cadres et d'éléments décoratifs.",
       image: "/jojobrico-peinture.jpg",
       alt: "Décoration intérieure",
       icon: PaintBucket,
     },
     {
-      title: "Revêtements de sol",
+      title: "Menuiserie",
       description:
-        "Pose de parquet, de moquette et autres revêtements pour vos sols intérieurs.",
-      image: "/jojobrico-sol.jpg",
-      alt: "Revêtements de sol",
+        "Changement de poignées de portes, pose des verrous, montage de meubles en kit",
+      image: "/jojobrico-meuble.jpg",
+      alt: "Menuiserie",
       icon: Layers,
     },
     {
-      title: "Jardinage & Extérieur",
+      title: "Jardinage",
       description:
         "Tonte de pelouse, taille de haies, nettoyage des sols et terrasses au nettoyeur haute pression.",
       image: "/jojobrico-pelouse.jpg",
@@ -70,11 +70,11 @@ export default function Home() {
       icon: Leaf,
     },
     {
-      title: "Maçonnerie & Montage",
+      title: "Divers",
       description:
-        "Petits travaux de maçonnerie, murets, pose de clôtures et montage de meubles.",
-      image: "/jojobrico-meuble.jpg",
-      alt: "Maçonnerie et montage",
+        "Réparation de fissures murales, rebouchafe de trous au sol, petist dépannage courants.",
+      image: "/jojobrico-divers.jpg",
+      alt: "Divers",
       icon: Hammer,
     },
   ];
