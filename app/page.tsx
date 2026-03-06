@@ -32,7 +32,7 @@ export default function Home() {
     {
       title: "Plomberie",
       description:
-        "Remplacement de robinetterie, de joints d'étanchéité, réfection des joints en silicone",
+        "Remplacement de robinetterie, de joints d'étanchéité, réfection des joints en silicone.",
       image: "/jojobrico-plomberie.jpg",
       alt: "Plomberie",
       icon: Droplet,
@@ -40,7 +40,7 @@ export default function Home() {
     {
       title: "Électricité",
       description:
-        "Remplacement d'interrupteurs et de prises, pose de luminaires et d'appliques murales",
+        "Remplacement d'interrupteurs et de prises, pose de luminaires et d'appliques murales.",
       image: "/jojobrico-electricite.jpg",
       alt: "Électricité",
       icon: Zap,
@@ -48,7 +48,7 @@ export default function Home() {
     {
       title: "Décoration",
       description:
-        "Retouche de peinture, pose de tringles d'étagères, de cadres et d'éléments décoratifs.",
+        "Retouche de peinture, pose de tringles, d'étagères, de cadres et d'éléments décoratifs.",
       image: "/jojobrico-peinture.jpg",
       alt: "Décoration intérieure",
       icon: PaintBucket,
@@ -56,7 +56,7 @@ export default function Home() {
     {
       title: "Menuiserie",
       description:
-        "Changement de poignées de portes, pose des verrous, montage de meubles en kit",
+        "Changement de poignées de portes, pose de verrous, montage de meubles en kit.",
       image: "/jojobrico-meuble.jpg",
       alt: "Menuiserie",
       icon: Layers,
@@ -64,7 +64,7 @@ export default function Home() {
     {
       title: "Jardinage",
       description:
-        "Tonte de pelouse, taille de haies, nettoyage des sols et terrasses au nettoyeur haute pression.",
+        "Tonte de pelouse, taille des haies, nettoyage des sols et terrasses au nettoyeur haute pression.",
       image: "/jojobrico-pelouse.jpg",
       alt: "Jardinage",
       icon: Leaf,
@@ -72,44 +72,13 @@ export default function Home() {
     {
       title: "Divers",
       description:
-        "Réparation de fissures murales, rebouchafe de trous au sol, petist dépannage courants.",
+        "Réparation de fissures murales, rebouchage de trous au sol, petits dépannage courants.",
       image: "/jojobrico-divers.jpg",
       alt: "Divers",
       icon: Hammer,
     },
   ];
-  const activities = [
-    {
-      title: "Plomberie",
-      image: "/jojobrico-plomberie.jpg",
-      alt: "Plomberie",
-    },
-    {
-      title: "Montage de meuble en kit",
-      image: "/jojobrico-meuble.jpg",
-      alt: "Montage de meuble en kit",
-    },
-    {
-      title: "Peinture intérieure",
-      image: "/jojobrico-peinture.jpg",
-      alt: "Peinture intérieure",
-    },
-    {
-      title: "Entretien espace vert",
-      image: "/jojobrico-pelouse.jpg",
-      alt: "Entretien espace vert",
-    },
-    {
-      title: "Électricité",
-      image: "/jojobrico-electricite.jpg",
-      alt: "Petits travaux d'électricité",
-    },
-    {
-      title: "Revêtements de sol",
-      image: "/jojobrico-sol.jpg",
-      alt: "Revêtement de sol",
-    },
-  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white ">
       <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
@@ -156,8 +125,13 @@ export default function Home() {
         </div>
       </header>
 
-      <section id="accueil" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section id="accueil" className="pt-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
+          <img
+            src="/jm-htm-logo.png"
+            alt="jm-htm-logo"
+            className=" w-48 mx-auto"
+          />
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl sm:text-6xl font-bold text-slate-900 leading-tight mb-6">
@@ -226,7 +200,7 @@ export default function Home() {
               Mes Services
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Travaux de dépannage et d’aménagement à domicile
+              Travaux de petits bricolage à domicile
             </p>
           </div>
 
