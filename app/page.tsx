@@ -26,6 +26,8 @@ import {
 } from "lucide-react";
 import { RequestQuoteModal } from "@/components/RequestQuoteModal";
 import Link from "next/link";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   const services = [
@@ -81,7 +83,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white ">
-      <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+      <Header />
+      {/* <header className="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-2">
@@ -105,7 +108,7 @@ export default function Home() {
               >
                 Réalisations
               </a> */}
-              <a
+      {/* <a
                 href="#contact"
                 className="text-slate-600 hover:text-[#4a94bb] transition-colors font-medium"
               >
@@ -122,8 +125,8 @@ export default function Home() {
               <a href="mailto:jojobrico64@outlook.fr">Ecrivez-moi</a>
             </Button>
           </div>
-        </div>
-      </header>
+        </div> 
+      </header> */}
 
       <section id="accueil" className="pt-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
@@ -356,7 +359,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-slate-900 text-slate-300 py-12 px-4 sm:px-6 lg:px-8">
+      {/* <footer className="bg-slate-900 text-slate-300 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center gap-2 mb-4">
             <Wrench className="h-6 w-6 text-[#4a94bb]" />
@@ -366,11 +369,18 @@ export default function Home() {
             Auto-entrepreneur spécialisé dans les petits travaux et la
             rénovation
           </p>
+          <a
+            href="/mentions-legales"
+            className="text-slate-400 hover:text-[#4a94bb] transition-colors text-lg mb-6"
+          >
+            Mentions Légales
+          </a>
           <p className="text-slate-500 text-sm">
             © 2026 Jojobrico. Tous droits réservés.
           </p>
         </div>
-      </footer>
+      </footer> */}
+      <Footer />
     </div>
   );
 }
